@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pixum.API", "Pixum.API\Pixum.API.csproj", "{744ED204-933E-42CB-AB71-A546EF599785}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pixum.API.Test", "Pixum.API.Test\Pixum.API.Test.csproj", "{35BECFA9-D241-451E-A8F3-8A708B5EBEB0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{744ED204-933E-42CB-AB71-A546EF599785}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{744ED204-933E-42CB-AB71-A546EF599785}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{744ED204-933E-42CB-AB71-A546EF599785}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{744ED204-933E-42CB-AB71-A546EF599785}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35BECFA9-D241-451E-A8F3-8A708B5EBEB0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35BECFA9-D241-451E-A8F3-8A708B5EBEB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35BECFA9-D241-451E-A8F3-8A708B5EBEB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35BECFA9-D241-451E-A8F3-8A708B5EBEB0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
