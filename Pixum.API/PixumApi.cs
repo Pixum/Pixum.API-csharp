@@ -24,10 +24,8 @@ namespace Pixum.API
         /// <summary>
         /// Creates new Pixum Service Api instance.
         /// </summary>
-        /// <param name="username"></param>
-        /// <param name="password"></param>
-        /// <param name="sessionId"></param>
-        /// <param name="loginToken"></param>
+        /// <param name="sessionId">A valid sessionId created by PixumApi.GetSessionId</param>
+        /// <param name="loginToken">A valid login token created by PixumApi.GetLoginToken</param>
         public PixumApi(string sessionId, string loginToken) : base(new RestClient(PixumApiBase.BaseURL))
         {
             _sessionId = sessionId;
@@ -87,6 +85,11 @@ namespace Pixum.API
             return response.Data.response.data.token;
         }
 
+        /// <summary>
+        /// Login the given Pixum user account.
+        /// </summary>
+        /// <param name="username">The username of the Pixum user.</param>
+        /// <param name="password">The password of the Pixum user.</param>
         public PSIUserLogin Login(string username, string password)
         {
             var request = CreateNonRestPSIRequest("auth", "session", "userLogin", 2);
@@ -100,6 +103,9 @@ namespace Pixum.API
             return Execute<PSIUserLogin>(request);
         }
 
+        /// <summary>
+        /// Logout the current Pixum user account.
+        /// </summary>
         public Task<List<dynamic>> Logout()
         {
             var request = CreateNonRestPSIRequest("auth", "session", "userLogout");
