@@ -150,5 +150,26 @@ namespace Pixum.API.Services
 
             return ExecuteAsync<PSIImageInfoSingleResponse>(request);
         }
+
+        /// <summary>
+        /// Get image informations for given image specified by its position in an album.
+        /// </summary>
+        /// <param name="position">The position of the image.</param>
+        /// <param name="albumId">The album where the image lives. Must be a number.</param>
+        /// <param name="withDescription">Include description.</param>
+        /// <returns></returns>
+        public Task<PSIImageInfoSingleResponse> GetImageByPosition(int position, int albumId, bool withDescription = true)
+        {
+            var request = CreateNonRestPSIRequest(ServiceName, "data", "singleReadByAlbumPosition");
+
+            request.AddParameter(new
+            {
+                albumId = albumId,
+                position = position,
+                withDescription = Convert.ToInt32(withDescription)
+            });
+
+            return ExecuteAsync<PSIImageInfoSingleResponse>(request);
+        }
     }
 }
